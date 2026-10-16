@@ -1,0 +1,91 @@
+.list {
+  min-width: 0;
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+}
+
+.trigger {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 64px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.number {
+  color: #827c73;
+  font: 10px 'DM Mono', monospace;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.symbol {
+  color: var(--accent-bright);
+  font-size: 19px;
+  text-align: right;
+}
+
+.body {
+  padding: 0 24px 23px 76px;
+  animation: reveal 0.2s ease;
+}
+
+.body p {
+  margin: 0 0 9px;
+  color: #d0cbc3;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.body span {
+  color: #858078;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .trigger {
+    grid-template-columns: 38px minmax(0, 1fr) 20px;
+    gap: 10px;
+    padding: 19px 0;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .body {
+    padding: 0 0 20px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .body {
+    animation: none;
+  }
+}

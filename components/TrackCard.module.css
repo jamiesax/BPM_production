@@ -1,0 +1,112 @@
+.card {
+  min-width: 0;
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 7%);
+  color: #f5e9d8;
+  cursor: pointer;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.cover::before {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 45%, rgb(255 255 255 / 13%), transparent 48%), linear-gradient(145deg, transparent 25%, rgb(0 0 0 / 32%));
+  content: '';
+}
+
+.cover:hover {
+  transform: translateY(-3px);
+  border-color: #785025;
+}
+
+.cover > span {
+  z-index: 1;
+  display: grid;
+  width: 48px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 48%);
+  border-radius: 50%;
+  background: rgb(0 0 0 / 26%);
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.cover small {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  color: rgb(255 255 255 / 65%);
+  font: 10px 'DM Mono', monospace;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 17px;
+}
+
+.info > div {
+  min-width: 0;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.info p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.year {
+  flex: 0 0 auto;
+  color: #77736e;
+  font: 10px 'DM Mono', monospace;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: #8a867f;
+  font-size: 10px;
+}
+
+.meta span {
+  flex: 0 0 auto;
+  color: #b07b3e;
+  font: 9px 'DM Mono', monospace;
+  white-space: nowrap;
+}
+
+@media (hover: none) {
+  .cover:hover {
+    transform: none;
+    border-color: rgb(255 255 255 / 7%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover {
+    transition: none;
+  }
+}

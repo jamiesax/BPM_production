@@ -1,0 +1,175 @@
+.page {
+  width: min(var(--page), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header {
+  padding: 104px 0 85px;
+  border-bottom: 1px solid var(--line);
+}
+
+.header > p,
+.catalogTop > p {
+  color: var(--accent-bright);
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 0.12em;
+}
+
+.header h1 {
+  margin: 27px 0 20px;
+  font-size: clamp(64px, 9vw, 110px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.085em;
+}
+
+.header h1 em {
+  color: #c78136;
+  font: italic 400 1em Georgia, serif;
+  letter-spacing: -0.065em;
+}
+
+.header > span {
+  color: #8e8981;
+  font-size: 13px;
+}
+
+.catalog {
+  padding: 61px 0 20px;
+}
+
+.catalogTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.catalogTop h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.catalogTop h2 span {
+  color: #77736e;
+  font: 11px 'DM Mono', monospace;
+}
+
+.catalogTop > p {
+  margin: 0;
+  color: #77736e;
+  font-size: 8px;
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.credits {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 70px;
+  margin-top: 114px;
+  padding-top: 54px;
+  border-top: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 19px;
+  color: var(--accent-bright);
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+.credits h2 {
+  margin: 0;
+  font-size: clamp(37px, 5vw, 54px);
+  line-height: 1.03;
+  letter-spacing: -0.06em;
+}
+
+.credits h2 span {
+  color: #77736e;
+}
+
+.creditList > div,
+.creditList > p {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+  gap: 14px;
+}
+
+.creditList > div {
+  padding-bottom: 12px;
+  color: #716c65;
+  font: 8px 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+.creditList > p {
+  margin: 0;
+  padding: 17px 0;
+  border-top: 1px solid #222;
+  color: #9e9991;
+  font-size: 10px;
+}
+
+.creditList b {
+  color: #e2ddd5;
+  font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .credits {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: calc(100% - 32px);
+  }
+
+  .header {
+    padding: 75px 0 60px;
+  }
+
+  .header h1 {
+    font-size: clamp(58px, 16vw, 84px);
+  }
+
+  .grid {
+    gap: 28px 14px;
+  }
+
+  .catalogTop {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .catalogTop > p {
+    text-align: left;
+  }
+
+  .creditList > div,
+  .creditList > p {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: 10px;
+  }
+
+  .creditList > div span:last-child,
+  .creditList > p span:last-child {
+    display: none;
+  }
+}
