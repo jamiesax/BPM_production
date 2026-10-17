@@ -8,11 +8,43 @@
   min-height: 74px;
   align-items: center;
   gap: 15px;
-  padding: 12px 20px;
+  padding: 12px 52px 12px 20px;
   border: 1px solid #37322c;
   background: rgb(17 17 17 / 96%);
   box-shadow: 0 16px 50px rgb(0 0 0 / 38%);
   backdrop-filter: blur(14px);
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  bottom: 22px;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid #37322c;
+  border-radius: 50%;
+  background: #171614;
+  color: #a7a199;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.close:hover {
+  border-color: #9c713c;
+  background: #211b14;
+  color: #e4a04a;
+}
+
+.close:focus-visible {
+  outline: 2px solid #e4a04a;
+  outline-offset: 2px;
 }
 
 .play {
@@ -93,7 +125,7 @@
     left: 8px;
     min-height: 64px;
     gap: 10px;
-    padding: 10px 12px;
+    padding: 10px 42px 10px 12px;
   }
 
   .track {
@@ -112,7 +144,7 @@
 @media (max-width: 380px) {
   .player {
     gap: 8px;
-    padding: 8px;
+    padding: 8px 38px 8px 8px;
   }
 
   .play {

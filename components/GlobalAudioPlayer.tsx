@@ -12,7 +12,15 @@ function stamp(value: number) {
 }
 
 export default function GlobalAudioPlayer() {
-  const { currentTrack, isPlaying, toggle, progress, duration, seek } = useAudio();
+  const {
+    currentTrack,
+    isPlaying,
+    toggle,
+    progress,
+    duration,
+    seek,
+    closePlayer,
+  } = useAudio();
 
   if (!currentTrack) {
     return null;
@@ -26,7 +34,7 @@ export default function GlobalAudioPlayer() {
         disabled={!currentTrack.audioUrl}
         aria-label={isPlaying ? 'Pause track' : 'Play track'}
       >
-        {isPlaying ? 'Ⅱ' : '▶'}
+        {isPlaying ? '⏸' : '▶'}
       </button>
 
       <div className={styles.track}>
@@ -45,12 +53,22 @@ export default function GlobalAudioPlayer() {
           onChange={(event) => seek(Number(event.target.value))}
           disabled={!currentTrack.audioUrl || !duration}
         />
-        <span>{duration ? stamp(duration) : '—:—'}</span>
+        <span>{duration ? stamp(duration) : '--:--'}</span>
       </div>
 
       <span className={styles.label}>
         {currentTrack.audioUrl ? 'NOW PLAYING' : 'AUDIO COMING SOON'}
       </span>
+
+      <button
+        className={styles.close}
+        type="button"
+        onClick={closePlayer}
+        aria-label="Stop music and close audio player"
+        title="Stop and close player"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
     </aside>
   );
 }

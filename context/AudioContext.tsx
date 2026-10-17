@@ -19,6 +19,7 @@ type AudioState = {
   playTrack: (track: Track) => void;
   toggle: () => void;
   seek: (time: number) => void;
+  closePlayer: () => void;
 };
 
 const AudioCtx = createContext<AudioState | null>(null);
@@ -95,6 +96,21 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  function closePlayer() {
+    const audio = audioRef.current;
+
+    if (audio) {
+      audio.pause();
+      audio.removeAttribute('src');
+      audio.load();
+    }
+
+    setCurrentTrack(null);
+    setIsPlaying(false);
+    setProgress(0);
+    setDuration(0);
+  }
+
   return (
     <AudioCtx.Provider
       value={{
@@ -105,6 +121,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
         playTrack,
         toggle,
         seek,
+        closePlayer,
       }}
     >
       <audio ref={audioRef} preload="metadata" />
