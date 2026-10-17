@@ -1,6 +1,6 @@
 # BPM — Bad Man Piddy
 
-An independent music production and studio portfolio for **BPM (Bad Man Piddy)**, owned by **Adelaja Oladipupo**. The site brings the studio’s work, services, approach, and project inquiry flow together in one polished, dark-themed experience.
+An independent music production and studio portfolio for **BPM (Bad Man Piddy)**, owned by **Oluwatosin Oladipupo Okulaja**. The site brings the studio’s work, services, approach, and project inquiry flow together in one polished, dark-themed experience.
 
 ## What problem this project solves
 

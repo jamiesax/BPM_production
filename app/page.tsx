@@ -33,7 +33,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div
+        {/* <div
           className={styles.heroVisual}
           aria-label="Abstract studio listening room"
         >
@@ -48,7 +48,7 @@ export default function HomePage() {
             MAKE IT LAST
           </span>
           <span className={styles.visualIndex}>FIG. 01 — THE ROOM</span>
-        </div>
+        </div> */}
 
         <div className={styles.heroFoot}>
           <span>BAD MAN PIDDY</span>

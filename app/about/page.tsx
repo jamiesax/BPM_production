@@ -26,7 +26,7 @@ export default function AboutPage() {
           <p className={styles.eyebrow}>A LITTLE CONTEXT</p>
           <h2>
             BPM — Bad Man Piddy — is an independent music studio owned by
-            Adelaja Oladipupo.
+            Oluwatosin Oladipupo Okulaja.
           </h2>
           <p>
             Built around a simple idea: every artist deserves a thoughtful
@@ -38,7 +38,7 @@ export default function AboutPage() {
             care, curiosity, and a collaborative spirit to every project.
           </p>
           <div className={styles.signature}>
-            Adelaja Oladipupo
+            Oluwatosin Oladipupo Okulaja
             <span>OWNER · BPM / BAD MAN PIDDY</span>
           </div>
         </div>
