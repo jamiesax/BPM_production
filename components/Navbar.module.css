@@ -5,6 +5,7 @@
   border-bottom: 1px solid rgb(255 255 255 / 6%);
   background: rgb(10 10 10 / 88%);
   backdrop-filter: blur(16px);
+  /* margin-bottom: 100px; */
 }
 
 .inner {
@@ -34,7 +35,7 @@
   height: 31px;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid #a65b14;
+  border: 0.1px solid #a65b1462;
   border-radius: 50%;
   color: var(--accent-bright);
   font-family: Georgia, serif;

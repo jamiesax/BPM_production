@@ -48,49 +48,7 @@
   place-items: center;
   overflow: hidden;
   border: 1px solid #292621;
-  background: radial-gradient(ellipse at 48% 40%, #493929, #1a1713 49%, #10100f 75%);
-}
-
-.portrait::after {
-  position: absolute;
-  right: -25%;
-  bottom: -43%;
-  left: -25%;
-  height: 75%;
-  border: 1px solid #78634b;
-  border-radius: 50%;
-  box-shadow: 0 -20px 80px #b3722a16;
-  content: '';
-}
-
-.light {
-  width: 160px;
-  height: 225px;
-  border-radius: 47% 47% 35% 35%;
-  background: linear-gradient(105deg, #29231c 10%, #796347 45%, #312a22 80%);
-  filter: blur(5px);
-  opacity: 0.55;
-  transform: translateY(30px);
-}
-
-.portrait > span,
-.portrait > small {
-  position: absolute;
-  z-index: 1;
-  color: #aaa08f;
-  font: 8px 'DM Mono', monospace;
-  letter-spacing: 0.1em;
-}
-
-.portrait > span {
-  top: 17px;
-  left: 17px;
-}
-
-.portrait > small {
-  right: 17px;
-  bottom: 16px;
-  color: #777065;
+  background: url('/images/piddy.jpg') center/contain no-repeat;
 }
 
 .bioCopy .eyebrow,

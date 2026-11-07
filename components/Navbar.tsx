@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const links = [
@@ -23,7 +23,15 @@ export default function Navbar() {
           href="/"
           aria-label="BPM — Bad Man Piddy home"
         >
-          <span className={styles.mark}>B</span>
+          {/* <span className={styles.mark}>B</span> */}
+          <Image
+            width={31}
+            height={31}
+            src="/images/Gemini_Generated_Image_uu0ixouu0ixouu0i.jpg"
+            alt="BPM icon"
+            className={styles.mark}
+          />
+
           <span className={styles.brandName}>
             BPM
             <span className={styles.brandLight}>BAD MAN PIDDY</span>

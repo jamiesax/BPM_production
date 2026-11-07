@@ -10,7 +10,8 @@ export default function HomePage() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.heroCopy}>
+        <div className={styles.heroOverlay}>
+          <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>
             <span /> PRODUCER · MIX ENGINEER · INDEPENDENT STUDIO
           </p>
@@ -33,27 +34,11 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* <div
-          className={styles.heroVisual}
-          aria-label="Abstract studio listening room"
-        >
-          <div className={`${styles.orbit} ${styles.orbitOne}`} />
-          <div className={`${styles.orbit} ${styles.orbitTwo}`} />
-          <div className={styles.disc}>
-            <div className={styles.discCenter}>BPM</div>
-          </div>
-          <span className={styles.visualNote}>
-            LISTEN CLOSELY
-            <br />
-            MAKE IT LAST
-          </span>
-          <span className={styles.visualIndex}>FIG. 01 — THE ROOM</span>
-        </div> */}
-
         <div className={styles.heroFoot}>
           <span>BAD MAN PIDDY</span>
           <span>PRODUCTION / MIXING / MASTERING</span>
           <span>AVAILABLE FOR SELECT PROJECTS</span>
+        </div>
         </div>
       </section>
 

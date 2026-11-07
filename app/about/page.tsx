@@ -1,5 +1,5 @@
 import GearAccordion from '@/components/GearAccordion';
-
+import Image from 'next/image';
 import styles from './about.module.css';
 
 export default function AboutPage() {
@@ -17,9 +17,13 @@ export default function AboutPage() {
 
       <section className={styles.bio}>
         <div className={styles.portrait}>
-          <div className={styles.light} />
-          <span>BPM STUDIO NOTES / 001</span>
-          <small>PLACE PORTRAIT HERE</small>
+          {/* <Image
+            fill
+            src="/images/piddy.jpg"
+            alt="BPM icon"
+            className={styles.mark}
+          />
+          ALREADY REFERENCED THE IMAGE IN CSS MODULE*/}
         </div>
 
         <div className={styles.bioCopy}>
