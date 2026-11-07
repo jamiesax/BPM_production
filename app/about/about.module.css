@@ -29,8 +29,11 @@
 }
 
 .header > span {
+  display: block;
+  max-width: 100%;
   color: #8e8981;
   font-size: 13px;
+  line-height: 1.7;
 }
 
 .bio {
@@ -44,11 +47,12 @@
 .portrait {
   position: relative;
   display: grid;
+  width: 100%;
   min-height: 440px;
   place-items: center;
   overflow: hidden;
   border: 1px solid #292621;
-  background: url('/images/piddy.jpg') center/contain no-repeat;
+  background: url('/images/piddy.jpg') center / contain no-repeat;
 }
 
 .bioCopy .eyebrow,
@@ -155,7 +159,6 @@
   }
 
   .portrait {
-    width: 100%;
     max-width: 500px;
     min-height: 380px;
   }

@@ -30,8 +30,11 @@
 }
 
 .header > span {
+  display: block;
+  max-width: 100%;
   color: #8e8981;
   font-size: 13px;
+  line-height: 1.7;
 }
 
 .services {
@@ -58,6 +61,7 @@
 
 .service {
   display: grid;
+  min-width: 0;
   grid-template-columns: 70px minmax(0, 1fr) 180px;
   align-items: start;
   gap: 25px;
@@ -79,6 +83,7 @@
 
 .service p {
   max-width: 560px;
+  overflow-wrap: anywhere;
   margin: 0;
   color: #8f8a82;
   font-size: 12px;
@@ -181,7 +186,7 @@
   }
 
   .service {
-    grid-template-columns: 35px minmax(0, 1fr);
+    grid-template-columns: 28px minmax(0, 1fr);
     gap: 10px;
     padding: 23px 0;
   }
@@ -194,6 +199,7 @@
     grid-column: 2;
     padding: 0;
     text-align: left;
+    overflow-wrap: anywhere;
   }
 
   .booking {

@@ -30,8 +30,11 @@
 }
 
 .header > span {
+  display: block;
+  max-width: 100%;
   color: #8e8981;
   font-size: 13px;
+  line-height: 1.7;
 }
 
 .catalog {
@@ -100,6 +103,7 @@
 .creditList > div,
 .creditList > p {
   display: grid;
+  min-width: 0;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
   gap: 14px;
 }
@@ -122,6 +126,7 @@
 .creditList b {
   color: #e2ddd5;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 850px) {
@@ -168,8 +173,13 @@
     gap: 10px;
   }
 
-  .creditList > div span:last-child,
-  .creditList > p span:last-child {
+  .creditList > div span:last-child {
     display: none;
+  }
+
+  .creditList > p span:last-child {
+    grid-column: 1 / -1;
+    color: #77736e;
+    font-size: 9px;
   }
 }

@@ -38,6 +38,7 @@
 }
 
 .demo {
+  min-width: 0;
   padding: 22px 25px 17px;
   border: 1px solid var(--line);
   background: linear-gradient(130deg, #121212, #0d0d0d);
@@ -96,6 +97,7 @@
 
 .waveform {
   display: flex;
+  min-width: 0;
   height: 140px;
   align-items: center;
   justify-content: center;
@@ -172,6 +174,16 @@
 
   .demoBottom span:last-child {
     text-align: left;
+  }
+}
+
+@media (max-width: 340px) {
+  .waveform {
+    gap: 1px;
+  }
+
+  .switch button {
+    padding: 7px 8px;
   }
 }
 
