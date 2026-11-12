@@ -10,8 +10,9 @@ export default function HomePage() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.heroOverlay}>
-          <div className={styles.heroCopy}>
+        <div className={styles.heroOverlay} aria-hidden="true" />
+
+        <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>
             <span /> PRODUCER · MIX ENGINEER · INDEPENDENT STUDIO
           </p>
@@ -21,7 +22,7 @@ export default function HomePage() {
             <em>intention.</em>
           </h1>
           <p className={styles.lead}>
-            BPM helps independent artists turn honest ideas into records that
+            BMP helps independent artists turn honest ideas into records that
             feel like themselves — only more.
           </p>
           <div className={styles.actions}>
@@ -35,10 +36,9 @@ export default function HomePage() {
         </div>
 
         <div className={styles.heroFoot}>
-          <span>BAD MAN PIDDY</span>
+          <span>BAHD MAN PIDDY</span>
           <span>PRODUCTION / MIXING / MASTERING</span>
           <span>AVAILABLE FOR SELECT PROJECTS</span>
-        </div>
         </div>
       </section>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
           The best production doesn’t get between you and the song. It helps
           the song become more itself.
         </blockquote>
-        <p>THE BPM APPROACH</p>
+        <p>THE BMP APPROACH</p>
       </section>
     </div>
   );
