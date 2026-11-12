@@ -1,6 +1,6 @@
 .page {
   width: min(var(--page), calc(100% - 48px));
-  margin: 0 auto;
+  margin: 110px auto 0;
 }
 
 .hero {
